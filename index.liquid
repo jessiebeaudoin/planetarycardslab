@@ -1,7 +1,13 @@
 ---
 layout: layout.liquid
-title: 11ty Boilerplate
+title: "Planetary Playing Cards"
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<h1>Planetary Playing Cards</h1>
+<p>Explore the solar system through our unique collection of planetary cards.</p>
+
+<div class="cards">
+    {% for planet in collections.planets %}
+        {% include "planet-card.liquid" with planet.data %}
+    {% endfor %}
+</div>
