@@ -1,50 +1,55 @@
+:root {
+    --card-size: 150px;
+    --sun-color: yellow;
+    --mercury-color: gray;
+    --venus-color: orange;
+    --earth-color: blue;
+    --mars-color: red;
+    --jupiter-color: brown;
+    --saturn-color: goldenrod;
+    --uranus-color: cyan;
+    --neptune-color: darkblue;
+}
+
 body {
-    font-family: Helvetica, sans-serif;
-    color: #EAE8FF;
-    background: #2D3142;
-    padding: 0 40px;
+    font-family: Arial, sans-serif;
     text-align: center;
+    background-color: #282c36;
+    color: white;
 }
 
-nav {
-    margin: 40px auto 0 auto;
-    width: 250px;
-    border-radius: 50px;
-    background: #212431;
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    list-style-type: none;
-    margin: 0;
-}
-
-nav ul li a {
-    display: inline-block;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
     padding: 20px;
-    color: #EAE8FF;
-    text-decoration: none;
-    font-size: 1.2em;
 }
 
-h1 {
-    font-size: 8em;
-    letter-spacing: -2px;
+.planet-card {
+    background: #3a3f4b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
 }
 
-h1 strong {
-    background: rgb(34,193,195);
-    background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.planet-card:hover {
+    transform: scale(1.05);
 }
 
-img.about {
-    opacity: 0.5;
+.planet-circle {
+    width: var(--card-size);
+    height: var(--card-size);
+    border-radius: 50%;
+    margin: 0 auto 10px;
 }
+
+.sun .planet-circle { background: var(--sun-color); }
+.mercury .planet-circle { background: var(--mercury-color); }
+.venus .planet-circle { background: var(--venus-color); }
+.earth .planet-circle { background: var(--earth-color); }
+.mars .planet-circle { background: var(--mars-color); }
+.jupiter .planet-circle { background: var(--jupiter-color); }
+.saturn .planet-circle { background: var(--saturn-color); }
+.uranus .planet-circle { background: var(--uranus-color); }
+.neptune .planet-circle { background: var(--neptune-color); }
