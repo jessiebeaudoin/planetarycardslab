@@ -1,8 +1,16 @@
 {
-  "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+  "name": "planetary-playing-cards",
+  "version": "1.0.0",
+  "description": "A single-page website showcasing planetary playing cards.",
+  "main": ".eleventy.js",
+  "scripts": {
+      "build": "eleventy",
+      "serve": "eleventy --serve",
+      "start": "npm run serve"
   },
-  "dependencies": {
-    "@11ty/eleventy-upgrade-help": "^3.0.1"
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+      "@11ty/eleventy": "^2.0.1"
   }
 }
